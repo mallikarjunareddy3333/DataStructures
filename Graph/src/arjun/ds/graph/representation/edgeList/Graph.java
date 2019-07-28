@@ -96,7 +96,7 @@ public class Graph {
 		System.out.println("\nFind Edge between A and D: " + graph.findIsThereEdge("A", "D"));
 		System.out.println("Find Edge between A and G: " + graph.findIsThereEdge("A", "G"));
 		System.out.println("Find Edge between G and H: " + graph.findIsThereEdge("G", "H"));
-		System.out.println("Find Edge between G and H: " + graph.findIsThereEdge("X", "H"));
+		System.out.println("Find Edge between X and H: " + graph.findIsThereEdge("X", "H"));
 		
 		System.out.println("\nAll the adjacent edges to A: ");
 		graph.findAllAdjacentEdges("A");
