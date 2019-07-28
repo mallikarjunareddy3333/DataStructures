@@ -22,7 +22,7 @@ class Edge {
 
 }
 
-public class GraphWithEdgeList {
+public class Graph {
 	List<String> vertext_list = new ArrayList<>();
 	List<Edge> edge_list = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class GraphWithEdgeList {
 	}
 
 	public static void main(String[] args) {
-		GraphWithEdgeList graph = new GraphWithEdgeList();
+		Graph graph = new Graph();
 		graph.addVertex("A");
 		graph.addVertex("B");
 		graph.addVertex("C");
