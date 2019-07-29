@@ -1,4 +1,4 @@
-package arjun.ds.graph.traversal.shortestpath;
+package arjun.ds.graph.shortestpath;
 
 //Java implementation of Dijkstra's Algorithm  
 //using Priority Queue 
@@ -27,17 +27,18 @@ public class DPQ {
 	// Function for Dijkstra's Algorithm
 	public void dijkstra(List<List<Node>> adj, int src) {
 		this.adj = adj;
-
+		
+		// step1: put all the vertices distances with max_value
 		for (int i = 0; i < V; i++) {
 			dist[i] = Integer.MAX_VALUE;
 		}
-
-		// Add source node to the priority queue
-		pq.add(new Node(src, 0));
-
+		
+		// step2: Add source node to the priority queue
 		// Distance to the source is 0
 		dist[src] = 0;
-
+		
+		pq.add(new Node(src, 0));
+		
 		while (settled.size() != V) {
 			int u = pq.remove().node;
 

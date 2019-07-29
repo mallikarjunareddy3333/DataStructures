@@ -1,4 +1,4 @@
-package arjun.ds.graph.traversal.shortestpath;
+package arjun.ds.graph.shortestpath;
 
 import java.util.Comparator;
 
