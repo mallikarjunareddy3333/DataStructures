@@ -1,4 +1,4 @@
-package arjun.ds.graph.traversal;
+package arjun.ds.graph.representation.edgeList;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -55,7 +55,8 @@ class Node {
 	}
 }
 
-class Graph {
+class GraphWithNodes {
+
 	Map<Node, LinkedList<Node>> adjacencyList = new HashMap<>();
 
 	void addVertex(String label) {
@@ -83,26 +84,8 @@ class Graph {
 		System.out.println("]");
 	}
 
-	void dfsTraversal(Node v, Graph graph) {
-
-		System.out.print(v.label + " ");
-		v.visited = true;
-		
-		Iterator<Node> it = graph.adjacencyList.get(v).listIterator();
-
-		while (it.hasNext()) {
-			Node node1 = it.next();
-			if (!node1.visited)
-				dfsTraversal(node1, graph);
-		}
-	}
-
-}
-
-public class DFS {
-
 	public static void main(String[] args) {
-		Graph graph = new Graph();
+		GraphWithNodes graph = new GraphWithNodes();
 		graph.addVertex("A");
 		graph.addVertex("B");
 		graph.addVertex("C");
@@ -126,8 +109,6 @@ public class DFS {
 		graph.addEdge("G", "H");
 
 		graph.printAllEdges();
-
-		graph.dfsTraversal(new Node("A"), graph);
 
 	}
 

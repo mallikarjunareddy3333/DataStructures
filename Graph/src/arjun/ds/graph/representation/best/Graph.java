@@ -16,9 +16,9 @@ public class Graph {
 		}
 	}
 
-	void addEdge(Graph graph, int src, int dest) {
-		graph.adjacentList[src].add(dest);
-		graph.adjacentList[dest].add(src);
+	void addEdge( int src, int dest) {
+		adjacentList[src].add(dest);
+		adjacentList[dest].add(src);
 	}
 
 	// A utility function to print the adjacency list
@@ -38,13 +38,13 @@ public class Graph {
 		// create the graph given in above figure
 		int V = 5;
 		Graph graph = new Graph(V);
-		graph.addEdge(graph, 0, 1);
-		graph.addEdge(graph, 0, 4);
-		graph.addEdge(graph, 1, 2);
-		graph.addEdge(graph, 1, 3);
-		graph.addEdge(graph, 1, 4);
-		graph.addEdge(graph, 2, 3);
-		graph.addEdge(graph, 3, 4);
+		graph.addEdge(0, 1);
+		graph.addEdge(0, 4);
+		graph.addEdge(1, 2);
+		graph.addEdge(1, 3);
+		graph.addEdge(1, 4);
+		graph.addEdge(2, 3);
+		graph.addEdge(3, 4);
 
 		// print the adjacency list representation of
 		// the above graph
